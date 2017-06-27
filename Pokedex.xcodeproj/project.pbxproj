@@ -14,6 +14,7 @@
 		F2DB2E4A1F02E00D00E1FB8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2DB2E481F02E00D00E1FB8E /* LaunchScreen.storyboard */; };
 		F2DB2E551F02E00D00E1FB8E /* PokedexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB2E541F02E00D00E1FB8E /* PokedexTests.swift */; };
 		F2DB2E601F02E00D00E1FB8E /* PokedexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB2E5F1F02E00D00E1FB8E /* PokedexUITests.swift */; };
+		F2DB2E6E1F02E3F700E1FB8E /* pokeman.csv in Resources */ = {isa = PBXBuildFile; fileRef = F2DB2E6D1F02E3F700E1FB8E /* pokeman.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F2DB2E5B1F02E00D00E1FB8E /* PokedexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokedexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2DB2E5F1F02E00D00E1FB8E /* PokedexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexUITests.swift; sourceTree = "<group>"; };
 		F2DB2E611F02E00D00E1FB8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2DB2E6D1F02E3F700E1FB8E /* pokeman.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokeman.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				F2DB2E461F02E00D00E1FB8E /* Assets.xcassets */,
 				F2DB2E481F02E00D00E1FB8E /* LaunchScreen.storyboard */,
 				F2DB2E4B1F02E00D00E1FB8E /* Info.plist */,
+				F2DB2E6D1F02E3F700E1FB8E /* pokeman.csv */,
 			);
 			path = Pokedex;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2DB2E6E1F02E3F700E1FB8E /* pokeman.csv in Resources */,
 				F2DB2E4A1F02E00D00E1FB8E /* LaunchScreen.storyboard in Resources */,
 				F2DB2E471F02E00D00E1FB8E /* Assets.xcassets in Resources */,
 				F2DB2E451F02E00D00E1FB8E /* Main.storyboard in Resources */,
