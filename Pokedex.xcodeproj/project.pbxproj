@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					F2DB2E3B1F02E00D00E1FB8E = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Q7J62NFPN5;
 						ProvisioningStyle = Automatic;
 					};
 					F2DB2E4F1F02E00D00E1FB8E = {
@@ -410,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q7J62NFPN5;
 				INFOPLIST_FILE = Pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.l3.jlev.Pokedex;
@@ -422,6 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q7J62NFPN5;
 				INFOPLIST_FILE = Pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.l3.jlev.Pokedex;
