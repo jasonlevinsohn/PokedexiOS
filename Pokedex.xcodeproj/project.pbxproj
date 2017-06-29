@@ -18,6 +18,9 @@
 		F2DB2E711F02E50000E1FB8E /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB2E701F02E50000E1FB8E /* Pokemon.swift */; };
 		F2DB2E761F02F31600E1FB8E /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB2E751F02F31600E1FB8E /* PokeCell.swift */; };
 		F2DB2E781F044A6000E1FB8E /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB2E771F044A6000E1FB8E /* csv.swift */; };
+		F2DB2E7A1F05679000E1FB8E /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2DB2E791F05679000E1FB8E /* pokemon.ttf */; };
+		F2DB2E7F1F05753B00E1FB8E /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = F2DB2E7E1F05753B00E1FB8E /* music.png */; };
+		F2DB2E811F05756000E1FB8E /* jiggypuff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F2DB2E801F05756000E1FB8E /* jiggypuff.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		F2DB2E701F02E50000E1FB8E /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		F2DB2E751F02F31600E1FB8E /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		F2DB2E771F044A6000E1FB8E /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		F2DB2E791F05679000E1FB8E /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.ttf; sourceTree = "<group>"; };
+		F2DB2E7E1F05753B00E1FB8E /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
+		F2DB2E801F05756000E1FB8E /* jiggypuff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jiggypuff.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,16 +111,16 @@
 		F2DB2E3E1F02E00D00E1FB8E /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
-				F2DB2E721F02F1A500E1FB8E /* Views */,
 				F2DB2E6F1F02E4E700E1FB8E /* Models */,
+				F2DB2E721F02F1A500E1FB8E /* Views */,
+				F2DB2E7B1F0567B900E1FB8E /* Controllers */,
+				F2DB2E7C1F0567CA00E1FB8E /* Resources */,
+				F2DB2E7D1F05680E00E1FB8E /* Utils */,
 				F2DB2E3F1F02E00D00E1FB8E /* AppDelegate.swift */,
-				F2DB2E411F02E00D00E1FB8E /* ViewController.swift */,
 				F2DB2E431F02E00D00E1FB8E /* Main.storyboard */,
 				F2DB2E461F02E00D00E1FB8E /* Assets.xcassets */,
 				F2DB2E481F02E00D00E1FB8E /* LaunchScreen.storyboard */,
 				F2DB2E4B1F02E00D00E1FB8E /* Info.plist */,
-				F2DB2E6D1F02E3F700E1FB8E /* pokeman.csv */,
-				F2DB2E771F044A6000E1FB8E /* csv.swift */,
 			);
 			path = Pokedex;
 			sourceTree = "<group>";
@@ -151,6 +157,33 @@
 				F2DB2E751F02F31600E1FB8E /* PokeCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		F2DB2E7B1F0567B900E1FB8E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2DB2E411F02E00D00E1FB8E /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F2DB2E7C1F0567CA00E1FB8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2DB2E7E1F05753B00E1FB8E /* music.png */,
+				F2DB2E791F05679000E1FB8E /* pokemon.ttf */,
+				F2DB2E801F05756000E1FB8E /* jiggypuff.mp3 */,
+				F2DB2E6D1F02E3F700E1FB8E /* pokeman.csv */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F2DB2E7D1F05680E00E1FB8E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F2DB2E771F044A6000E1FB8E /* csv.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +295,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2DB2E7A1F05679000E1FB8E /* pokemon.ttf in Resources */,
 				F2DB2E6E1F02E3F700E1FB8E /* pokeman.csv in Resources */,
 				F2DB2E4A1F02E00D00E1FB8E /* LaunchScreen.storyboard in Resources */,
+				F2DB2E811F05756000E1FB8E /* jiggypuff.mp3 in Resources */,
 				F2DB2E471F02E00D00E1FB8E /* Assets.xcassets in Resources */,
 				F2DB2E451F02E00D00E1FB8E /* Main.storyboard in Resources */,
+				F2DB2E7F1F05753B00E1FB8E /* music.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

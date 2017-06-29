@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,
     UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collection: UICollectionView!
     
-    var pokemon = [Pokemon]()
+    var pokemonCollection = [Pokemon]()
+    var musicPlayer: AVAudioPlayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,18 +23,60 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.dataSource = self
         collection.delegate = self
         
+        parsePokemonCSV()
+        initAudio()
+        
         
     }
     
+    func initAudio() {
+        let path = Bundle.main.path(forResource: "jiggypuff", ofType: "mp3")!
         
+        do {
+            
+            musicPlayer = try AVAudioPlayer(contentsOf: URL(string: path)!)
+            musicPlayer.prepareToPlay()
+            musicPlayer.numberOfLoops = -1
+            musicPlayer.play()
+            
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+    }
+    
+    func parsePokemonCSV() {
+        
+        let path = Bundle.main.path(forResource: "pokeman", ofType: "csv")!
+        
+        do {
+            let csv = try CSV(contentsOfURL: path)
+            let rows = csv.rows
+            print(rows)
+            
+            for row in rows {
+                let pokeId = Int(row["id"]!)!
+                let name = row["identifier"]!
+                
+                let poke = Pokemon(name: name, pokedexId: pokeId)
+                pokemonCollection.append(poke)
+            }
+            
+            
+            
+        } catch let error as NSError {
+            print("Error parsing CSV: \(error.debugDescription)")
+        }
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         // We don't want to load all the listings in the collection at once so we use dequeueResuableCell to only show the ones
         // visible on the screen, once they leave the screen they will be dequeued.
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
             
-            let pokemon = Pokemon(name: "Pokemon", pokedexId: indexPath.row)
-            cell.configureCell(pokemon)
+            let poke = pokemonCollection[indexPath.row]
+            cell.configureCell(poke)
             
             return cell
         } else {
@@ -45,7 +89,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return pokemonCollection.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -54,6 +98,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return  CGSize(width: 105, height: 105)
+    }
+    
+    
+    @IBAction func musicBtnPressed(_ sender: UIButton) {
+        if musicPlayer.isPlaying {
+            musicPlayer.pause()
+            sender.alpha = 0.2
+        } else {
+            musicPlayer.play()
+            sender.alpha = 1.0
+        }
     }
 }
 
